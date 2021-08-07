@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+Filters component
+filters component dispalays a list of filters, that view a list of options for each when toggled, and allows you to pick multiple options from multiple filters
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+props :
+  filtersOptions: (`object`) The filters and the options the componet can view, orgnized in JS object with filter names as keys and the values is an array of objects that contain the id and title for each option [required]
+  appliedFiltersWereUpdated: (`func`) A callback function that is called when the applier filters and theier option are updated, it has only one parameter which is the applied options in the same structure as `filtersOptions` [optional]
+  disabled : (`boolean`) a boolean disables the component if true, default value `false` [optional]
+  width: (`string`) the width of the component using same css values and units, default value `100%` [optional]
+  className: (`string`) classname to be addded to the root element in the component to make styling easier [optional]
+  theme: (`object`) and object that contain the basic variables used to style the component [optional]
 
-## Available Scripts
+  defualt theme: 
+{ 
+     palette: {
+    primary: {
+      main: "rgba(40, 40, 40,1)",
+      light: "rgba(50, 50, 50,1)",
+      dark: "rgba(30, 30, 30,1)",
+    },
+    secondary: {
+      main: "rgba(06, 06, 06, 1)",
+      light: "rgba(08, 08, 08, 1)",
+      dark: "rgba(05, 05, 05, 1)",
+    },
+    highLight: {
+      main: "#f00",
+      light: "#ff0000aa",
+    },
+    confirm: {
+      main: "#0f0",
+      light: "#00ff00aa",
+    },
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    reject: {
+      main: "#0000ff",
+      light: "#0000ffaa",
+    },
+    text: {
+      main: "#eee",
+      light: "#fff",
+      dark: "#ccc",
+    },
+  },
+  border: {
+    size: "1px",
+    style: "solid",
+    color: {
+      main: "#eee",
+      light: "#fff",
+      dark: "#ccc",
+    },
+  },
+  typography: {
+    fontFamily: ["Helvetica Neue", "Arial", "sans-serif"],
+    fontStyle: "normal",
+    fontSize: "14px",
+  },
+  spacing: {
+    factor: "5",
+    unit: "px",
+  },
+  menuHeight: "70px",
+};
+}
